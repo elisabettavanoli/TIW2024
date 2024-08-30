@@ -1,0 +1,230 @@
+/* style.css */
+
+/* Stile generale per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif; /* Imposta il font generale */
+    background-color: #f4f4f4; /* Imposta il colore di sfondo della pagina */
+    margin: 0; /* Rimuove il margine predefinito */
+    padding: 0; /* Rimuove il padding predefinito */
+}
+
+/* Stile per titoli */
+h2, h3 {
+    color: #333; /* Imposta il colore del testo per i titoli */
+    text-align: center;
+}
+
+/* Stile per i link */
+a {
+    color: #007BFF; /* Imposta il colore del link */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+}
+
+a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+/* Container principale per il layout */
+.container {
+    width: 80%; /* Imposta la larghezza del container */
+    margin: 0 auto; /* Centra il container orizzontalmente */
+    padding: 20px; /* Aggiunge padding intorno al contenuto */
+}
+
+/* Stile per la sezione di logout e trash */
+.header {
+    text-align: right; /* Allinea il testo a destra */
+    margin-bottom: 20px; /* Aggiunge margine inferiore */
+}
+
+#trash-container {
+    display: inline-block; /* Visualizza come elemento inline block */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    margin: 0;
+}
+
+#trash-container img {
+    width: 30%; /* Riduce la dimensione dell'icona del cestino del 60% */
+    margin: 0;
+}
+
+/* Stile per i messaggi di benvenuto */
+#welcome-message {
+    text-align: center; /* Centra il testo */
+    margin-bottom: 20px; /* Aggiunge margine inferiore */
+}
+
+/* Box generico per contenere sezioni */
+.box {
+    background-color: #fff; /* Colore di sfondo bianco */
+    border: 1px solid #ddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 20px; /* Padding interno */
+    margin-bottom: 20px; /* Margine inferiore */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    width: 600px;
+}
+
+/* Stile per le sezioni di gruppo */
+.group-section {
+    margin-bottom: 20px; /* Margine inferiore */
+    flex: 1; /* Permette la crescita della sezione */
+}
+
+.group-section ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    padding: 0; /* Rimuove il padding */
+}
+
+.group-section ul li {
+    padding: 10px; /* Padding interno */
+    border-bottom: 1px solid #ddd; /* Bordo inferiore */
+}
+
+.group-section ul li:last-child {
+    border-bottom: none; /* Rimuove il bordo inferiore per l'ultimo elemento */
+}
+
+.group-section h3 {
+    margin-top: 0; /* Rimuove il margine superiore */
+}
+
+/* Stile per i dettagli del gruppo */
+.group-details {
+    flex: 2; /* Permette la crescita della sezione */
+    margin-left: 20px; /* Margine a sinistra */
+}
+
+.group-details p {
+    margin: 5px 0; /* Margine sopra e sotto */
+}
+
+/* Header per la sezione dei dettagli del gruppo */
+.details-header {
+    display: flex; /* Disposizione flessibile */
+    justify-content: space-between; /* Spazia gli elementi */
+    align-items: center; /* Allinea gli elementi al centro */
+}
+
+/* Layout per la sezione principale */
+.main-content {
+    display: flex; /* Disposizione flessibile */
+    justify-content: space-between; /* Spazia gli elementi */
+}
+
+/* Stile per il modulo di creazione del gruppo */
+.form-section {
+    margin-top: 20px; /* Margine superiore */
+}
+
+form {
+    max-width: 500px; /* Massima larghezza del form */
+    margin: 0 auto; /* Centra il form orizzontalmente */
+    background-color: #fff; /* Sfondo bianco */
+    padding: 20px; /* Padding interno */
+    border: 1px solid #ddd; /* Bordo grigio */
+    border-radius: 5px; /* Angoli arrotondati */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+form fieldset {
+    border: none; /* Rimuove il bordo del fieldset */
+    padding: 0; /* Rimuove il padding */
+    margin: 0; /* Rimuove il margine */
+}
+
+form label {
+	width: 300px;
+    display: inline-block; /* Visualizza come blocco */
+    margin-bottom: 8px; /* Margine inferiore */
+    color: #333; /* Colore del testo */
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"]{
+    width: 320px; /* Larghezza calcolata */
+    padding: 8px; /* Padding interno */
+    margin-bottom: 15px; /* Margine inferiore */
+    border: 1px solid #ddd; /* Bordo grigio */
+    border-radius: 3px; /* Angoli arrotondati */
+    font-size: 14px; /* Dimensione del font */
+}
+
+form input[type="button"] {
+    width: 100%; /* Larghezza del 100% */
+    padding: 10px; /* Padding interno */
+    border: none; /* Rimuove il bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #007BFF; /* Colore di sfondo blu */
+    color: #fff; /* Colore del testo bianco */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    font-size: 16px; /* Dimensione del font */
+}
+
+form input[type="button"]:hover {
+    background-color: #0056b3; /* Cambia colore di sfondo al passaggio del mouse */
+}
+
+form p {
+    margin-top: 10px; /* Margine superiore */
+    font-size: 14px; /* Dimensione del font */
+    color: #888; /* Colore del testo grigio */
+}
+
+/* Stile per il modal */
+.modal {
+    display: none; /* Nasconde il modal */
+    position: fixed; /* Posizionamento fisso */
+    z-index: 1; /* Indice di z */
+    left: 0; /* Allinea a sinistra */
+    top: 0; /* Allinea in alto */
+    width: 100%; /* Larghezza del 100% */
+    height: 100%; /* Altezza del 100% */
+    overflow: auto; /* Overflow automatico */
+    background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo semitrasparente */
+    padding-top: 60px; /* Padding superiore */
+}
+
+.modal-content {
+    background-color: #fff; /* Colore di sfondo bianco */
+    margin: 5% auto; /* Margine automatico per centrare */
+    padding: 20px; /* Padding interno */
+    border: 1px solid #888; /* Bordo grigio */
+    width: 80%; /* Larghezza del 80% */
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+.close-button {
+    color: #aaa; /* Colore del testo */
+    float: right; /* Allinea a destra */
+    font-size: 28px; /* Dimensione del font */
+    font-weight: bold; /* Testo in grassetto */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000; /* Cambia colore al passaggio del mouse e al focus */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+/* Stile per il bottone di invito */
+#invite-button {
+    padding: 10px 20px; /* Padding interno */
+    border: none; /* Rimuove il bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #28a745; /* Colore di sfondo verde */
+    color: #fff; /* Colore del testo bianco */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+#invite-button:hover {
+    background-color: #218838; /* Cambia colore di sfondo al passaggio del mouse */
+}
+
+#groups-alert {
+	color: red;
+    display: block; /* Imposta il display a block */
+    margin-top: 10px; /* Aggiungi un margine superiore per la spaziatura */
+}

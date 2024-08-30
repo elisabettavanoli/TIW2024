@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Gestione Gruppi</title>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/style.css" />
+<!-- Collegamento al file CSS -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="Logout">Logout</a>
+        </div>
+        <h2 id="welcome-message">Benvenuto</h2>
+        <section class="main-content">
+            <div class="group-section box">
+                <h3>Groups you created</h3>
+                <ul id="created-groups-list"></ul>
+                <p id="created-groups-alert"></p>
+            </div>
+            <div class="group-section box">
+                <h3>Groups you are invited to</h3>
+                <ul id="invited-groups-list"></ul>
+                <p id="invited-groups-alert"></p>
+            </div>
+            <div id="group-details" class="boxed group-details box">
+                <div class="details-header">
+                    <p><b>Group details</b></p>
+                    <p id="trash-container" class="trash" >
+                        <img id="trash-icon" src="IMAGES/trash-icon.png" alt="Trash Icon">
+                    </p>
+                    
+                </div>
+                <p><span>Title: </span><span id="title"></span></p>
+                <p><span>Date of creation: </span><span id="date"></span></p>
+                <p><span>Duration (in days): </span><span id="duration"></span></p>
+                <p><span>Minimum number of participants: </span><span id="min"></span></p>
+                <p><span>Maximum number of participants: </span><span id="max"></span></p>
+                <p>Participants:</p>
+                <ul id="participants-list"></ul>
+                <p id="groups-alert"></p>
+           
+            </div>
+        </section>
+        
+        <section class="form-section">
+            <h2>Create a new group</h2>
+            <form action="#">
+                <fieldset>
+                    <label>Title:</label>
+                    <input type="text" name="title" id="group-title" required><br>
+                    <label>Duration (in days):</label>
+                    <input type="number" name="duration" id="group-duration" min="1" required><br>
+                    <label>Number of minimum participants:</label>
+                    <input type="number" name="min" id="group-min" min="1" required><br>
+                    <label>Number of maximum participants:</label>
+                    <input type="number" name="max" id="group-max" min="1" required><br>
+                    <input id="submitButton" type="button" value="Submit">
+                </fieldset>
+            </form>
+        </section>
+        <!-- Modal -->
+        <div id="user-selection-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2>Select Users to Invite</h2>
+                <ul id="user-list"></ul>
+                <button id="invite-button" onclick="inviteUsers()">Invite</button>
+                <p id="modal-alert"></p>
+            </div>
+        </div>
+    </div>
+    <script src="homeManagement.js"></script>
+    <script src="utils.js"></script>
+</body>
+</html>

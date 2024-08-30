@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+<title>Login page</title>
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="loginManagement.js" charset="utf-8" defer></script>
+<script src="signupManagement.js" charset="utf-8" defer></script>
+
+</head>
+<body>
+	<h3>Please Login:</h3>
+	<form action="#">
+		<fieldset>
+			Username: <input type="text" name="username" required> <br>
+			Password: <input type="password" name="pwd" required><br>
+			<input id="loginButton" type="button" value="login">
+			<p id="loginMsg"></p>
+		</fieldset>
+	</form>
+	<h3>Or Signup:</h3>
+	<form action="#">
+		<fieldset>
+			Email: <input type="email" name="email" required> <br>
+			Username: <input type="text" name="username" required> <br>
+			Name: <input type="text" name="name" required> <br>
+			Lastname: <input type="text" name="lastname" required> <br>
+			Password: <input type="password" name="pwd1" required><br>
+			Repeate Password: <input type="password" name="pwd2" required><br>
+			<input id="signupButton" type="button" value="signup">
+			<p id="signupMsg"></p>
+		</fieldset>
+	</form>
+
+</body>
+</html>
