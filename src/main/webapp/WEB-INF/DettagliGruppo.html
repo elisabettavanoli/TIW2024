@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>Group Details</title>
+</head>
+<body>
+    <div class="align-right">
+        <a class="return-link" th:href="@{/Logout}">Logout</a>
+    </div>
+    <h2>Group Details</h2>
+    <div class="box">
+        <p><span>Title:</span> <span th:text="${group.title}"></span></p>
+        <p><span>Date of creation:</span> <span th:text="${group.date}"></span></p>
+        <p><span>Duration:</span> <span th:text="${group.duration + ' days'}"></span></p>
+        <p><span>Minimum participants:</span> <span th:text="${group.min}"></span></p>
+        <p><span>Maximum participants:</span> <span th:text="${group.max}"></span></p>
+        <p>Participants:</p>
+        <ul class="user-list">
+            <li th:each="p : ${participants}" class="user-list-item" th:text="${p.name + ' ' + p.lastname}"></li>
+        </ul>
+    </div>
+</body>
+</html>

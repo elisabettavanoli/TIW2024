@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login page</title>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+    <h3>Please Login:</h3>
+
+    <form action="CheckLogin" method="POST">
+        Username: <input type="text" name="username" required> <br>
+        Password: <input type="password" name="pwd" required><br>
+        <input type="submit" value="login">
+        <p th:text=" ${loginMsg}"></p>
+    </form>
+
+    <h3>Or Signup:</h3>
+
+    <form action="CheckSignup" method="POST">
+        Email: <input type="email" name="email" required> <br>
+        Username: <input type="text" name="username" required> <br>
+        Name: <input type="text" name="name" required> <br>
+        Lastname: <input type="text" name="lastname" required> <br>
+        Password: <input type="password" name="pwd1" required><br>
+        Repeat Password: <input type="password" name="pwd2" required><br>
+        <input type="submit" value="signup">
+        <p th:text=" ${signupMsg}"></p>
+    </form>
+</body>
+</html>

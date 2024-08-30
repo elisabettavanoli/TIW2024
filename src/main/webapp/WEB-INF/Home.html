@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="align-right">
+        <a th:href="@{/Logout}">Logout</a>
+    </div>
+    <h2 th:text="${'Welcome ' + session.user.name + ' ' + session.user.lastname}"></h2>
+    
+    <div class="container">
+        <div class="box">
+            <div class="group-section">
+                <h3>Groups you created:</h3>
+                <div th:if="${createdGroups.size() > 0}">
+                    <ul>
+                        <li th:each="g : ${createdGroups}">
+                            <a th:href="@{/GetGroupDetails(groupId=${g.id})}" th:text="${g.title}"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div th:if="${createdGroups.size() == 0}">You haven't created any active groups.</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="group-section">
+                <h3>Groups you've been invited to:</h3>
+                <div th:if="${invitedGroups.size() > 0}">
+                    <ul>
+                        <li th:each="g : ${invitedGroups}">
+                            <a th:href="@{/GetGroupDetails(groupId=${g.id})}" th:text="${g.title}"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div th:if="${invitedGroups.size() == 0}">There are no active groups you've been invited to.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="group-section">
+        <h3>Complete the form to create a group</h3>
+        <form action="#" th:action="@{/ShowUsers}" method="GET">
+            <fieldset>
+                <p>
+                    Title: <input type="text" name="title" required />
+                </p>
+                <p>
+                    Duration (in days): <input type="number" name="duration" min="1" required />
+                </p>
+                <p>
+                    Number of minimum participants: <input type="number" name="min" min="0" required />
+                </p>
+                <p>
+                    Number of maximum participants: <input type="number" name="max" min="1" required />
+                </p>
+                <input type="submit" name="Invia" value="Invia">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

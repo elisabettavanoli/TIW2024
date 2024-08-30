@@ -1,0 +1,105 @@
+/* Stile generale per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif; /* Imposta il font generale */
+    background-color: #f4f4f4; /* Colore di sfondo della pagina */
+    margin: 20px; /* Margine esterno */
+    padding: 0; /* Rimuove il padding predefinito */
+    text-align: left; /* Allinea il testo a sinistra per la maggior parte dei contenuti */
+}
+
+/* Stile per i titoli */
+h2, h3 {
+    color: #333; /* Colore del testo per i titoli */
+    font-weight: bold; /* Testo in grassetto */
+    text-align: left; /* Allinea al centro per i titoli principali */
+    margin-bottom: 10px; /* Margine inferiore per i titoli */
+}
+
+/* Stile per i paragrafi */
+p {
+    color: #555; /* Colore del testo più scuro */
+    margin-bottom: 8px; /* Margine inferiore per i paragrafi */
+}
+
+/* Stile per i link */
+a {
+    color: #007BFF; /* Colore del link */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+}
+
+a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
+}
+
+/* Allinea a destra */
+.align-right {
+    text-align: right; /* Allinea a destra il contenuto */
+    margin-bottom: 20px; /* Margine inferiore per separare i contenuti */
+}
+
+/* Box generico per contenere sezioni */
+.box {
+    background-color: #fff; /* Colore di sfondo bianco */
+    border: 1px solid #ddd; /* Bordo grigio chiaro */
+    border-radius: 5px; /* Angoli arrotondati */
+    padding: 20px; /* Padding interno */
+    margin-bottom: 20px; /* Margine inferiore */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    display: inline-block; /* Mostra come blocco inline */
+    width: calc(50% - 20px); /* Larghezza del 50% meno il padding */
+    box-sizing: border-box; /* Calcola la larghezza includendo il padding e il bordo */
+    vertical-align: top; /* Allinea i box in alto */
+}
+
+/* Stile per le liste */
+ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    padding: 0; /* Rimuove il padding */
+}
+
+ul li {
+    padding: 10px; /* Padding interno */
+    border-bottom: 1px solid #ddd; /* Bordo inferiore */
+}
+
+ul li:last-child {
+    border-bottom: none; /* Rimuove il bordo inferiore per l'ultimo elemento */
+}
+
+/* Stile per il pulsante di invio */
+.submit-btn {
+    padding: 10px 20px; /* Padding interno */
+    border: none; /* Rimuove il bordo */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #007BFF; /* Colore di sfondo blu */
+    color: #fff; /* Colore del testo bianco */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+/* Stile per il messaggio di errore */
+.error-msg {
+    color: #dc3545; /* Colore del testo rosso */
+    text-align: center; /* Allineamento al centro */
+    margin-top: 10px; /* Margine superiore */
+    font-size: 14px; /* Dimensione del testo */
+}
+
+/* Stile per il link di ritorno */
+.return-link {
+    display: inline-block; /* Visualizza come blocco inline */
+    padding: 10px 20px; /* Padding interno */
+    border: 1px solid #007BFF; /* Bordo sottile blu */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: #007BFF; /* Colore di sfondo blu */
+    color: #fff; /* Colore del testo bianco */
+    text-decoration: none; /* Rimuove la sottolineatura predefinita */
+    transition: background-color 0.3s ease; /* Transizione per il colore di sfondo */
+}
+
+.return-link:hover {
+    background-color: #0056b3; /* Cambia il colore di sfondo al passaggio del mouse */
+}

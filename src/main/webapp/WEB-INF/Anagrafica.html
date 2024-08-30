@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <title>User List</title>
+</head>
+<body>
+    <h2>Available Users:</h2>
+
+    <div class="no-users-found" th:if="${users.size() == 0}">
+        No users found.
+    </div>
+    
+    <form class="invite-form" action="#" th:action="@{/CheckInvitations}" method="POST">
+        <input type="hidden" name="groupId" th:value="${session.group.id}" />
+        
+        <ul class="user-list" th:if="${users.size() > 0}">
+            <li th:each="user : ${users}" class="user-list-item">
+                <input type="checkbox" th:value="${user.username}" name="users"
+                    th:checked="${#lists.contains(session.selectedUsers, user.username)}" />
+                <span th:text="${user.name + ' ' + user.lastname}"></span>
+            </li>
+        </ul>
+
+        <div class="error-msg" th:if="${errorMsg}">
+            <p th:text="${errorMsg}"></p>
+        </div>
+        
+        <input type="submit" class="submit-btn" value="Invite">
+    </form>
+</body>
+</html>
